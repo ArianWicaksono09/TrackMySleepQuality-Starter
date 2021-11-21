@@ -24,6 +24,7 @@ import androidx.room.Update
 
 @Dao
 interface SleepDatabaseDao {
+
     @Insert
     fun insert(night: SleepNight)
 
@@ -41,4 +42,5 @@ interface SleepDatabaseDao {
 
     @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC")
     fun getAllNights(): LiveData<List<SleepNight>>
+
 }
